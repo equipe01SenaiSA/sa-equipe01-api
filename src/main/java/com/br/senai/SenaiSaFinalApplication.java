@@ -1,4 +1,4 @@
-package com.br.senai;
+                                                                                                                                        package com.br.senai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
