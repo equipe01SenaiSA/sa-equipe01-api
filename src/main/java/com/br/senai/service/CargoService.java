@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
+import java.util.List;
+
 import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Service
@@ -57,12 +60,12 @@ public class CargoService {
         return cargoEncontrado;
     }
 
-/*
+
 	public List<Cargo> listarPor(
-			@NotEmpty(message = "O nome é obrigatório")
-			String nome){
-		return repository.listarPor("%" + nome + "%");
+			@NotEmpty(message = "A descrição curta é obrigatória")
+			String descricaoCurta){
+		return repository.listarPor("%" + descricaoCurta + "%");
 	}
 
-	 */
+	 
 }

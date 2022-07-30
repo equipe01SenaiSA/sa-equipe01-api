@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SenaiSaFinalApplication {
+public class InitApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SenaiSaFinalApplication.class, args);
+		SpringApplication.run(InitApp.class, args);
 	}
 
 }

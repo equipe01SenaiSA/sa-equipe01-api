@@ -59,15 +59,15 @@ public class CargoController {
         return ResponseEntity.ok(jsonObj.toMap());
     }
 
-/*
-    @GetMapping(value = "/nome/{nome}")
+
+    @GetMapping(value = "/descricao-curta/{descricaoCurta}")
     public ResponseEntity<?> listarPor(
-            @PathVariable(name = "nome")
-            String nome){
+            @PathVariable(name = "descricaoCurta")
+            String descricaoCurta){
         return ResponseEntity.ok(mapConverter
-                .toJsonList(service.listarPor(nome)));
+                .toJsonList(service.listarPor(descricaoCurta)));
     }
-*/
+
     @DeleteMapping(value = "/id/{id}")
     public ResponseEntity<?> excluirPor(
             @PathVariable(name = "id")
