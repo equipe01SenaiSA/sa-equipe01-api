@@ -61,13 +61,13 @@ public class ColaboradorController {
     }
 
     
-//        @GetMapping(value = "/nome/{nome}")
-//        public ResponseEntity<?> listarPor(
-//                @PathVariable(name = "nome")
-//                String nome){
-//            return ResponseEntity.ok(mapConverter
-//                    .toJsonList(service.listarPor(nome)));
-//        }
+        @GetMapping(value = "/nome/{nome}")
+        public ResponseEntity<?> listarPor(
+                @PathVariable(name = "nome")
+                String nome){
+            return ResponseEntity.ok(mapConverter
+                    .toJsonList(service.listarPor(nome)));
+        }
     
     @DeleteMapping(value = "/id/{id}")
     public ResponseEntity<?> excluirPor(

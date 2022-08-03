@@ -13,7 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
+import java.util.List;
+
 import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Service
@@ -67,12 +70,12 @@ public class ColaboradorService {
         return colaboradorEncontrado;
     }
 
-/*
-	public List<Cargo> listarPor(
+
+	public List<Colaborador> listarPor(
 			@NotEmpty(message = "O nome é obrigatório")
 			String nome){
 		return repository.listarPor("%" + nome + "%");
 	}
 
-	 */
+	
 }
