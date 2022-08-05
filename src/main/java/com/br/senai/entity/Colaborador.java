@@ -55,4 +55,9 @@ public class Colaborador {
     @JoinColumn(name = "usuario_id")
     @NotNull(message = "O usuário do colaborador é obrigatório")
     private Usuario usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "cargo_id")
+    @NotNull(message = "O cargo é obrigatório")
+    private Cargo cargo;
 }
