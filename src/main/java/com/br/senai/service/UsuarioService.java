@@ -29,7 +29,7 @@ public class UsuarioService {
 		Usuario UsuarioEncontrado = repository.buscarloginESenha(login, senha);
 		if (UsuarioEncontrado == null) {
 			throw new RegistroNaoEncontradoException(
-					"Não foi encontrado o Usuario");
+					"Login ou senha inválidos");
 		}
 		return UsuarioEncontrado;
 	}
