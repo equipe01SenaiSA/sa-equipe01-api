@@ -67,5 +67,7 @@ public class CargoService {
 		return repository.listarPor("%" + descricaoCurta + "%");
 	}
 
-	 
+	public List<Cargo> listAllCargos(){
+		return repository.findAll();
+	} 
 }

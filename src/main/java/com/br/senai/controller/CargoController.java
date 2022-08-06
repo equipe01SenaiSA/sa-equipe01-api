@@ -4,12 +4,16 @@ import com.br.senai.entity.Cargo;
 import com.br.senai.service.CargoService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.apache.catalina.connector.Response;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -74,5 +78,10 @@ public class CargoController {
             Integer id){
         this.service.excluirPor(id);
         return ResponseEntity.noContent().build();
+    }
+    
+    @GetMapping("/findAll")
+    public ResponseEntity<List<Cargo>> listAllCargos(){
+    	return ResponseEntity.ok(this.service.listAllCargos());
     }
 }
