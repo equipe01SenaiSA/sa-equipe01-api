@@ -17,11 +17,13 @@ public class Cargo {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "descricao_curta")
+    @Column(name = "descricao_curta",unique = true)
     @NotEmpty(message = "A descrição curta do cargo é obrigatória")
     @Pattern(regexp = "[A-zÀ-ú\s]{2,100}",
             message = "A  descrição curta deve ter entre 2 e 100 caracteres literais.")
     //unica
     private String descricaoCurta;
 
+    @Column(name = "atribuicoes")
+    private String atribuicoes;
 }

@@ -33,10 +33,8 @@ public class ColaboradorController {
         Colaborador novoColaborador = mapper
                 .convertValue(colaboradorMap, Colaborador.class);
         Colaborador colaboradorSalvo = service.inserir(novoColaborador);
-        return ResponseEntity.created(
-                URI.create(
-                        "/colaboradores-/id/" + colaboradorSalvo.getId()
-                )
+        //return ResponseEntity.created(URI.create("/colaboradores-/id/" + colaboradorSalvo.getId())
+        return ResponseEntity.created(URI.create("/colaboradores/id/" + colaboradorSalvo.getId())
         ).build();
     }
 
